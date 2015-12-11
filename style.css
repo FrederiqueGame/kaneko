@@ -271,20 +271,22 @@ button,
 input,
 select,
 textarea {
-	color: #404040;
-	font-family: sans-serif;
-	font-size: 16px;
-	font-size: 1rem;
-	line-height: 1.5;
+font-size: 16px;
+font-size: 1rem;
+font-family: ‘PT Serif’, serif;
+line-height: 1.5;
+color: #333333;
+color: hsl(0, 0%, 20%);
 }
 
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-	clear: both;
+h1, h2, h3, h4, h5, h6 {
+clear: right;
+font-weight: 900;
+font-family: ‘roboto’, sans-serif;
+color: #000;
+color: hsl(0, 0%, 0%);
+-ms-word-break: break-word;
+word-break: break-word;
 }
 
 p {
