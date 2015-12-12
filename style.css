@@ -406,8 +406,8 @@ input[type="submit"] {
     text-transform: uppercase;
     line-height: 1;
     color: hsl(0, 0%, 100%);
-    background: #ff5f0f;
-    background: hsl(20, 100%, 53%);
+    background: #80424C;
+    background: hsl(350, 32%, 38%);
     border: none;
     cursor: pointer; /* Improves usability and consistency of cursor style between image-type 'input' and others */
     -webkit-appearance: button; /* Corrects inability to style clickable 'input' types in iOS */

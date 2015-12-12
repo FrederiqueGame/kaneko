@@ -117,6 +117,8 @@ function kaneko_scripts() {
 	
 	wp_enqueue_style( 'kaneko-style', get_stylesheet_uri() );
 
+	wp_enqueue_style ( 'kaneko-layout' , get_template_directory_uri() . '/layouts/content-sidebar.css');
+
 	wp_enqueue_style ('kaneko-google-fonts', 'http://fonts.googleapis.com/css?family=Roboto:400,300,500,700' );
                     
 	wp_enqueue_style ('kaneko_fontawesome', 'http://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css');
