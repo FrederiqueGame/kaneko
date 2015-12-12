@@ -545,9 +545,8 @@ a:active {
     display: block;
     clear: both;
     font-family: 'Roboto', sans-serif;
-    text-transform: uppercase;
-    background: #404040;
-    background: hsl(0, 0%, 19%);
+    background: #262626;
+    background: hsl(0, 0%, 15%);
 }
 .main-navigation ul {
     list-style: none;
@@ -560,9 +559,9 @@ a:active {
 }
 .main-navigation a {
     display: block;
-    padding: 1.3em 1em;
-    font-size: 14px;
-    font-size: 1.4rem;
+    padding: 1em;
+    font-size: 16px;
+    font-size: 1.6rem;
     text-decoration: none;
     line-height: 1.3em;
     color: white;
