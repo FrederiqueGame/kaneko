@@ -1,19 +1,19 @@
 /*
 Theme Name: kaneko
 Theme URI: http://underscores.me/
-Author: Underscores.me
-Author URI: http://underscores.me/
-Description: Description
-Version: 1.0.0
-License: GNU General Public License v2 or later
+Author: Frederique Game
+Author URI: http://www.colormyweb.fr
+Description: Kaneko is a responsive, accessible, high-resolution theme
+Version: 1.0
+License: GNU General Public License.
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 Text Domain: kaneko
-Tags:
+Tags: white, black, blue, light, one-column, two-columns, right-sidebar, responsive-layout, accessibility-ready, custom-colors, custom-header, custom-menu, editor-style, featured-images, microformats, post-formats, sticky-post, threaded-comments, translation-ready, rtl-language-support
 
 This theme, like WordPress, is licensed under the GPL.
 Use it to make something cool, have fun, and share what you've learned with others.
 
-kaneko is based on Underscores http://underscores.me/, (C) 2012-2015 Automattic, Inc.
+Kaneko is based on Underscores http://underscores.me/, (C) 2012-2015 Automattic, Inc.
 Underscores is distributed under the terms of the GNU GPL v2 or later.
 
 Normalizing styles have been helped along thanks to the fine work of
@@ -48,7 +48,6 @@ Nicolas Gallagher and Jonathan Neal http://necolas.github.com/normalize.css/
 # Normalize
 --------------------------------------------------------------*/
 html {
-	font-family: sans-serif;
 	-webkit-text-size-adjust: 100%;
 	-ms-text-size-adjust:     100%;
 }
@@ -271,42 +270,31 @@ button,
 input,
 select,
 textarea {
-font-size: 16px;
-font-size: 1rem;
-font-family: ‘PT Serif’, serif;
-line-height: 1.5;
-color: #333333;
-color: hsl(0, 0%, 20%);
+	font-size: 18px;
+	font-size: 1.8rem;
+	font-family: 'PT Serif', serif;
+	line-height: 1.5;
+	color: #333333;
+	color: hsl(0, 0%, 20%);
 }
 
 h1, h2, h3, h4, h5, h6 {
-clear: right;
-font-weight: 900;
-font-family: ‘roboto’, sans-serif;
-color: #000;
-color: hsl(0, 0%, 0%);
--ms-word-break: break-word;
-word-break: break-word;
+	clear: right;
+	font-weight: 700;
+	font-family: 'Roboto', sans-serif;
+	color: #000;
+	color: hsl(0, 0%, 0%);
+	-ms-word-break: break-word;
+	word-break: break-word;
 }
 
-p {
-	margin-bottom: 1.5em;
-}
+p {margin-bottom: 1.5em;}
 
-dfn,
-cite,
-em,
-i {
-	font-style: italic;
-}
+dfn, cite, em, i {font-style: italic;}
 
-blockquote {
-	margin: 0 1.5em;
-}
+blockquote {margin: 0 1.5em;}
 
-address {
-	margin: 0 0 1.5em;
-}
+address {margin: 0 0 1.5em;}
 
 pre {
 	background: #eee;
@@ -320,36 +308,20 @@ pre {
 	padding: 1.6em;
 }
 
-code,
-kbd,
-tt,
-var {
-	font-family: Monaco, Consolas, "Andale Mono", "DejaVu Sans Mono", monospace;
-	font-size: 15px;
-	font-size: 0.9375rem;
-}
+code, kbd, tt, var {font-family: Monaco, Consolas, "Andale Mono", "DejaVu Sans Mono", monospace;font-size: 15px;font-size: 0.9375rem;}
 
-abbr,
-acronym {
-	border-bottom: 1px dotted #666;
-	cursor: help;
-}
+abbr, acronym {border-bottom: 1px dotted #666;cursor: help;}
 
-mark,
-ins {
-	background: #fff9c0;
-	text-decoration: none;
-}
+mark, ins {background: #fff9c0;text-decoration: none;}
 
-big {
-	font-size: 125%;
-}
+big {font-size: 125%;}
 
 /*--------------------------------------------------------------
 # Elements
 --------------------------------------------------------------*/
 html {
 	box-sizing: border-box;
+	font-size: 62.5%; /* Corrects text resizing oddly in IE6/7 when body font-size is set using em units http://clagnut.com/blog/348/#c790 */
 }
 
 *,
@@ -387,8 +359,8 @@ ol {
 }
 
 ul {
-list-style:,none;
-margin: 0;
+	list-style: none;
+	margin: 0;
 }
 
 ol {
@@ -422,31 +394,31 @@ table {
 /*--------------------------------------------------------------
 # Forms
 --------------------------------------------------------------*/
+
 button,
-input[type=»button»],
-input[type=»reset»],
-input[type=»submit»] {
-	padding: 1em;
-	font-size: 18px;
-    font-size: 1.2rem;
-    font-family: ‘Lato’;
+input[type="button"],
+input[type="reset"],
+input[type="submit"] {
+    padding: 1em 1.2em;
+    font-size: 16px;
+    font-size: 1.6rem;
+    font-family: 'Roboto';
     text-transform: uppercase;
     line-height: 1;
-    color:white;
     color: hsl(0, 0%, 100%);
-    background: #3c3c3c;
-    background: hsl(0, 0%, 24%);
+    background: #ff5f0f;
+    background: hsl(20, 100%, 53%);
     border: none;
-    border-radius: 3px;
-    cursor: pointer; 
- -webkit-appearance: button; }
+    cursor: pointer; /* Improves usability and consistency of cursor style between image-type 'input' and others */
+    -webkit-appearance: button; /* Corrects inability to style clickable 'input' types in iOS */
+}
 
 button:hover,
 input[type="button"]:hover,
 input[type="reset"]:hover,
 input[type="submit"]:hover {
-	border-color: #ccc #bbb #aaa;
-	box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.8), inset 0 15px 17px rgba(255, 255, 255, 0.8), inset 0 -5px 12px rgba(0, 0, 0, 0.02);
+	background: #000;
+	background: hsl(0, 0%, 0%);
 }
 
 button:focus,
@@ -457,8 +429,8 @@ button:active,
 input[type="button"]:active,
 input[type="reset"]:active,
 input[type="submit"]:active {
-	border-color: #aaa #bbb #bbb;
-	box-shadow: inset 0 -1px 0 rgba(255, 255, 255, 0.5), inset 0 2px 5px rgba(0, 0, 0, 0.15);
+    background: #000;
+    background: hsl(0, 0%, 0%);
 }
 
 input[type="text"],
@@ -467,9 +439,10 @@ input[type="url"],
 input[type="password"],
 input[type="search"],
 textarea {
-	color: #666;
-	border: 1px solid #ccc;
-	border-radius: 3px;
+	padding: 10px;
+    font-family: 'Roboto', sans serif;
+    color: #333;
+    border: 1px solid #ccc;
 }
 
 input[type="text"]:focus,
@@ -481,18 +454,6 @@ textarea:focus {
 	color: #111;
 }
 
-input[type=»text»],
-input[type=»email»],
-input[type=»url»],
-input[type=»password»],
-input[type=»search»],
-textarea {
-    padding: 8px;
-    font-family: ‘Lato’, sans-serif;
-    color: #333;
-    border: 1px solid #ccc;
-}
-
 /*--------------------------------------------------------------
 # Navigation
 --------------------------------------------------------------*/
@@ -500,17 +461,20 @@ textarea {
 ## Links
 --------------------------------------------------------------*/
 a {
-	color: royalblue;
+    text-decoration: none;	
+    color: #000;
+    color: hsl(0, 0%, 0%);    
 }
 
 a:visited {
-	color: purple;
+    color: #333;
+    color: hsl(0, 0%, 20%);
 }
 
 a:hover,
 a:focus,
-a:active {
-	color: midnightblue;
+a:active { 
+    text-decoration: underline; 
 }
 
 a:focus {

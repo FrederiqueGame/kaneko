@@ -114,6 +114,7 @@ add_action( 'widgets_init', 'kaneko_widgets_init' );
  * Enqueue scripts and styles.
  */
 function kaneko_scripts() {
+	
 	wp_enqueue_style( 'kaneko-style', get_stylesheet_uri() );
 
 	wp_enqueue_style ('kaneko-google-fonts', 'http://fonts.googleapis.com/css?family=Roboto:400,300,500,700' );
