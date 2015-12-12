@@ -1,6 +1,6 @@
 /*
 Theme Name: kaneko
-Theme URI: http://underscores.me/
+Theme URI: http://www.colormyweb.fr
 Author: Frederique Game
 Author URI: http://www.colormyweb.fr
 Description: Kaneko is a responsive, accessible, high-resolution theme
@@ -27,6 +27,7 @@ Nicolas Gallagher and Jonathan Neal http://necolas.github.com/normalize.css/
 # Typography
 # Elements
 # Forms
+# Header
 # Navigation
 	## Links
 	## Menus
@@ -270,7 +271,6 @@ button,
 input,
 select,
 textarea {
-	font-size: 18px;
 	font-size: 1.8rem;
 	font-family: 'PT Serif', serif;
 	line-height: 1.5;
@@ -288,7 +288,8 @@ h1, h2, h3, h4, h5, h6 {
 	word-break: break-word;
 }
 
-p {margin-bottom: 1.5em;}
+p {
+	margin-bottom:     1.5em;}
 
 dfn, cite, em, i {font-style: italic;}
 
@@ -439,7 +440,7 @@ input[type="url"],
 input[type="password"],
 input[type="search"],
 textarea {
-	padding: 10px;
+	padding: 8px;
     font-family: 'Roboto', sans serif;
     color: #333;
     border: 1px solid #ccc;
@@ -484,6 +485,54 @@ a:focus {
 a:hover,
 a:active {
 	outline: 0;
+}
+
+
+/*--------------------------------------------------------------
+## Header
+--------------------------------------------------------------*/
+
+.site-branding {
+    padding: 5rem 0;
+    text-align: center;
+    background: #5396B2;
+    background: hsl(198, 38%, 51%);
+}
+
+.site-title {
+    font-weight: 700;
+    font-size: 40px;
+    font-size: 4.5rem;
+    text-transform: uppercase;
+    line-height: normal;
+}
+
+.site-description {
+    font-weight: 100;
+    font-size: 22px;
+    font-size: 2.2rem;
+}
+                       
+.site-branding a { 
+    text-decoration: none; 
+}
+
+.site-title a,
+.site-description { 
+    color: #fff;
+    color: hsl(0, 0%, 100%);
+}
+                    
+/* Header responsive */
+@media screen and (max-width: 600px) {
+    .site-branding { padding: 0.5rem 0; }
+    
+    .title-box {
+        max-width: 100%;
+        margin: 0;
+        padding: 4rem;
+        border: none;
+    }
 }
 
 /*--------------------------------------------------------------
