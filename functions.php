@@ -108,6 +108,16 @@ function kaneko_widgets_init() {
 		'before_title'  => '<h2 class="widget-title">',
 		'after_title'   => '</h2>',
 	) );
+
+		register_sidebar( array(
+		'name'          => esc_html__( 'Footer Widgets', 'kaneko' ),
+		'id'            => 'footer-area',
+		'description'   => 'Zone du footer',
+		'before_widget' => '<section id="%1$s" class="widget %2$s">',
+		'after_widget'  => '</section>',
+		'before_title'  => '<h2 class="widget-title">',
+		'after_title'   => '</h2>',
+	) );
 }
 add_action( 'widgets_init', 'kaneko_widgets_init' );
 
@@ -116,19 +126,21 @@ add_action( 'widgets_init', 'kaneko_widgets_init' );
  */
 function kaneko_scripts() {
 	
-	wp_enqueue_style( 'kaneko-style', get_stylesheet_uri() );
+	wp_enqueue_style ( 'kaneko-style', get_stylesheet_uri() );
 
-	wp_enqueue_style ( 'kaneko-layout' , get_template_directory_uri() . '/layouts/content-sidebar.css');
+	wp_enqueue_style ( 'kaneko-layout' , get_template_directory_uri() . '/layouts/content-sidebar.css' );
 
-	wp_enqueue_style ('kaneko-google-fonts', 'http://fonts.googleapis.com/css?family=Roboto:400,300,500,700' );
+	wp_enqueue_style ( 'kaneko-google-fonts', 'http://fonts.googleapis.com/css?family=Roboto:400,300,500,700' );
                     
-	wp_enqueue_style ('kaneko_fontawesome', 'http://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css');
+	wp_enqueue_style ( 'kaneko_fontawesome', 'http://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css' );
 
-	wp_enqueue_script( 'kaneko-navigation', get_template_directory_uri() . '/js/navigation.js', array(), '20120206', true );
+	wp_enqueue_script ( 'kaneko-navigation', get_template_directory_uri() . '/js/navigation.js', array(), '20120206', true );
 
-	wp_enqueue_script( 'kaneko-hide-search', get_template_directory_uri() . '/js/hide-search.js', array(), '20150101', true );
+	wp_enqueue_script ( 'kaneko-hide-search', get_template_directory_uri() . '/js/hide-search.js', array(), '20150101', true );
 
-	wp_enqueue_script( 'kaneko-skip-link-focus-fix', get_template_directory_uri() . '/js/skip-link-focus-fix.js', array(), '20130115', true );
+	wp_enqueue_script( 'kaneko-masonry', get_template_directory_uri() . '/js/masonry-settings.js', array('masonry'), '20150101', true );
+
+	wp_enqueue_script ( 'kaneko-skip-link-focus-fix', get_template_directory_uri() . '/js/skip-link-focus-fix.js', array(), '20130115', true );
 
 	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
 		wp_enqueue_script( 'comment-reply' );
