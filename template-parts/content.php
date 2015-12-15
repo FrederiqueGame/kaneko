@@ -11,6 +11,17 @@
 
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 	<header class="entry-header">
+
+		<?php
+			if (has_post_thumbnail()) {
+			    echo '<div class="small-index-thumbnail clear">';
+			    echo '<a href="' . get_permalink() . '" title="' . __('Read ', 'kaneko') . get_the_title() . '" rel="bookmark">';
+			    echo the_post_thumbnail('index-thumb');
+			    echo '</a>';
+			    echo '</div>';
+			}
+			?>
+
 		<?php
 			if ( is_single() ) {
 				the_title( '<h1 class="entry-title">', '</h1>' );
@@ -41,7 +52,7 @@
 		?>
 	</div><!-- .entry-content -->
 
-	<footer class="entry-footer">
-		<?php kaneko_entry_footer(); ?>
+	<footer class="entry-footer lire-suite">
+		<?php echo '<a href="' . get_permalink() . '" title="' . __('Lire la suite ', 'kaneko') . get_the_title() . '" rel="bookmark">Lire la suite...</a>'; ?>
 	</footer><!-- .entry-footer -->
 </article><!-- #post-## -->

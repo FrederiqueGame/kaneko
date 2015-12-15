@@ -1061,6 +1061,17 @@ input[type="search"] {
 	margin: 0 0 1.5em;
 }
 
+.lire-suite {
+    margin: 0 4rem;
+    font-weight: 900;
+    font-size: 18px;
+    font-size: 1.8rem;
+}
+
+.small-index-thumbnail { 
+    margin-bottom: 1em;
+}
+
 /*--------------------------------------------------------------
 ## Asides
 --------------------------------------------------------------*/
