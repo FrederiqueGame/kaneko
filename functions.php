@@ -127,10 +127,20 @@ add_action( 'widgets_init', 'kaneko_widgets_init' );
  * Enqueue scripts and styles.
  */
 function kaneko_scripts() {
+
+	        // Get the current layout setting (sidebar left or right)
+        $kaneko_layout = get_option( 'layout_setting' );
+        if ( is_page_template( 'full-width-page.php' ) || ! is_active_sidebar( 'sidebar-1' ) ) {
+            $layout_stylesheet = '/layouts/full.css';
+        } elseif ( 'left-sidebar' == $kaneko_layout ) {
+            $layout_stylesheet =  '/layouts/sidebar-content.css';
+        } else {
+            $layout_stylesheet = '/layouts/content-sidebar.css';
+        }
 	
 	wp_enqueue_style ( 'kaneko-style', get_stylesheet_uri() );
 
-	wp_enqueue_style ( 'kaneko-layout' , get_template_directory_uri() . '/layouts/content-sidebar.css' );
+	wp_enqueue_style ( 'kaneko-layout' , get_template_directory_uri() . $layout_stylesheet );
 
 	wp_enqueue_style ( 'kaneko-google-fonts', 'http://fonts.googleapis.com/css?family=Roboto:400,300,500,700' );
                     
